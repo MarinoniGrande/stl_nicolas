@@ -1,0 +1,1 @@
+DIRETORIO_PRINCIPAL = '/content/drive/MyDrive/Mestrado'
