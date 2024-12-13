@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 
 
 class Base:
-    def __init__(self, diretorio=None, input_shape=None, is_normalizar=False, tipo='unlabeled', labels=None,
+    def __init__(self, diretorio=None, input_shape=None, is_normalizar=True, tipo='unlabeled', labels=None,
                  is_base_separada=False):
         """
         Classe focada em carregar bases de dados de uma forma genérica.

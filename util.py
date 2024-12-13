@@ -1,8 +1,13 @@
 import json
 import random
 
-DIRETORIO_PRINCIPAL = '/content/drive/MyDrive/Mestrado'
+DIRETORIO_PRINCIPAL = r'C:\Users\nmgra\PycharmProjects\stl_nicolas'
+ARQUIVO_CONFIGURACOES = 'configuracoes.json'
 
+def carregar_configuracoes(arquivo=None):
+    global ARQUIVO_CONFIGURACOES
+    ARQUIVO_CONFIGURACOES = arquivo
+    return True
 
 def get_padrao(variavel=None):
     """
@@ -10,7 +15,7 @@ def get_padrao(variavel=None):
     :param variavel: Variável que deseja retornar o valor padrão
     :return: Valor padrão da variável
     """
-    with open(f'{DIRETORIO_PRINCIPAL}/configuracoes.json') as f:
+    with open(f'{DIRETORIO_PRINCIPAL}/{ARQUIVO_CONFIGURACOES}') as f:
         data = json.load(f)
 
     return data.get(variavel)
